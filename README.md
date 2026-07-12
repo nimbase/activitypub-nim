@@ -45,6 +45,7 @@ requires "ormin#head"
 - Linked Data Signatures (2017/2019)
 - FEP compatibility (FEP-2677, FEP-8cf5, FEP-7888)
 - Rate limiting and request validation middleware
+- Support non-spec ecosystem extensions (Mastodon's Hashtag, Emoji, PropertyValue)
 - API stabilization for v1.0.0 release
 
 ### ❤ Contributions & Support

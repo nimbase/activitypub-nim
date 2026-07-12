@@ -1,5 +1,5 @@
 import std/[uri, options]
-import openparser/json
+import pkg/openparser/json
 export uri, options, json
 
 type
@@ -33,7 +33,7 @@ type
     signClientKey*: Option[ID]
     sharedInbox*: Option[ID]
 
-proc parseHook*(parser: var JsonParser, v: var Addresses) =
+proc parseHook*(parser: var json.JsonParser, v: var Addresses) =
   if parser.curr.kind == jtkLBracket:
     parser.expectSkip(jtkLBracket)
     while parser.curr.kind != jtkRBracket:
