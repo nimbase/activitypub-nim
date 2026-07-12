@@ -1,0 +1,4 @@
+nimTitle	webfinger	activitypub/discovery/webfinger.html	module activitypub/discovery/webfinger		0
+nim	parseHandle	activitypub/discovery/webfinger.html#parseHandle,string	proc parseHandle(handle: string): tuple[user: string, domain: string]		9
+nim	resolveActor	activitypub/discovery/webfinger.html#resolveActor,string	proc resolveActor(handle: string): tuple[actorUrl: string, actor: JsonNode]		33
+nim	buildJrd	activitypub/discovery/webfinger.html#buildJrd,string,string,seq[string],string,string	proc buildJrd(subject: string; actorUrl: string; aliases: seq[string] = @[];\n         profilePage: string = ""; avatarUrl: string = ""): JsonNode		72

@@ -1,0 +1,13 @@
+nimTitle	activitypub_client	activitypub/client/activitypub_client.html	module activitypub/client/activitypub_client		0
+nim	Client	activitypub/client/activitypub_client.html#Client	object Client		23
+nim	newClient	activitypub/client/activitypub_client.html#newClient,JsonNode,string	proc newClient(actorJson: JsonNode; privateKeyHex: string): Client		30
+nim	newClient	activitypub/client/activitypub_client.html#newClient,string,string	proc newClient(actorId, privateKeyHex: string): Client		45
+nim	sendTo	activitypub/client/activitypub_client.html#sendTo,Client,JsonNode,string	proc sendTo(client: Client; activity: JsonNode; inboxUrl: string): FederationResult[\n    string]		52
+nim	resolveActorUrl	activitypub/client/activitypub_client.html#resolveActorUrl,string	proc resolveActorUrl(target: string): string		97
+nim	resolveInbox	activitypub/client/activitypub_client.html#resolveInbox,string	proc resolveInbox(target: string): string		107
+nim	follow	activitypub/client/activitypub_client.html#follow,Client,string	proc follow(client: Client; targetHandleOrUrl: string): FederationResult[string]		138
+nim	unfollow	activitypub/client/activitypub_client.html#unfollow,Client,string	proc unfollow(client: Client; targetHandleOrUrl: string): FederationResult[string]		147
+nim	like	activitypub/client/activitypub_client.html#like,Client,string,string	proc like(client: Client; actorHandleOrUrl, objectUrl: string): FederationResult[\n    string]		157
+nim	unlike	activitypub/client/activitypub_client.html#unlike,Client,string,string	proc unlike(client: Client; actorHandleOrUrl, objectUrl: string): FederationResult[\n    string]		167
+nim	postNote	activitypub/client/activitypub_client.html#postNote,Client,string,seq[string],seq[string],string	proc postNote(client: Client; content: string; to: seq[string] = @[];\n         cc: seq[string] = @[]; summary: string = ""): FederationResult[string]		178
+nimgrp	newclient	activitypub/client/activitypub_client.html#newClient-procs-all	proc		30

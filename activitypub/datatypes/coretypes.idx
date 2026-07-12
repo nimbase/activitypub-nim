@@ -1,0 +1,56 @@
+nimTitle	coretypes	activitypub/datatypes/coretypes.html	module activitypub/datatypes/coretypes		0
+nim	otObject	activitypub/datatypes/coretypes.html#otObject	ObjectType.otObject		13
+nim	otArticle	activitypub/datatypes/coretypes.html#otArticle	ObjectType.otArticle		13
+nim	otAudio	activitypub/datatypes/coretypes.html#otAudio	ObjectType.otAudio		13
+nim	otDocument	activitypub/datatypes/coretypes.html#otDocument	ObjectType.otDocument		13
+nim	otEvent	activitypub/datatypes/coretypes.html#otEvent	ObjectType.otEvent		13
+nim	otImage	activitypub/datatypes/coretypes.html#otImage	ObjectType.otImage		13
+nim	otNote	activitypub/datatypes/coretypes.html#otNote	ObjectType.otNote		13
+nim	otPage	activitypub/datatypes/coretypes.html#otPage	ObjectType.otPage		13
+nim	otPlace	activitypub/datatypes/coretypes.html#otPlace	ObjectType.otPlace		13
+nim	otProfile	activitypub/datatypes/coretypes.html#otProfile	ObjectType.otProfile		13
+nim	otRelationship	activitypub/datatypes/coretypes.html#otRelationship	ObjectType.otRelationship		13
+nim	otTombstone	activitypub/datatypes/coretypes.html#otTombstone	ObjectType.otTombstone		13
+nim	otVideo	activitypub/datatypes/coretypes.html#otVideo	ObjectType.otVideo		13
+nim	ObjectType	activitypub/datatypes/coretypes.html#ObjectType	enum ObjectType		13
+nim	puCm	activitypub/datatypes/coretypes.html#puCm	PlaceUnits.puCm		29
+nim	puFeet	activitypub/datatypes/coretypes.html#puFeet	PlaceUnits.puFeet		29
+nim	puInches	activitypub/datatypes/coretypes.html#puInches	PlaceUnits.puInches		29
+nim	puKm	activitypub/datatypes/coretypes.html#puKm	PlaceUnits.puKm		29
+nim	puM	activitypub/datatypes/coretypes.html#puM	PlaceUnits.puM		29
+nim	puMiles	activitypub/datatypes/coretypes.html#puMiles	PlaceUnits.puMiles		29
+nim	PlaceUnits	activitypub/datatypes/coretypes.html#PlaceUnits	enum PlaceUnits		29
+nim	Source	activitypub/datatypes/coretypes.html#Source	object Source		37
+nim	ObjectBase	activitypub/datatypes/coretypes.html#ObjectBase	object ObjectBase		42
+nim	Article	activitypub/datatypes/coretypes.html#Article	object Article		115
+nim	Audio	activitypub/datatypes/coretypes.html#Audio	object Audio		119
+nim	Document	activitypub/datatypes/coretypes.html#Document	object Document		123
+nim	Event	activitypub/datatypes/coretypes.html#Event	object Event		127
+nim	Image	activitypub/datatypes/coretypes.html#Image	object Image		131
+nim	Note	activitypub/datatypes/coretypes.html#Note	object Note		135
+nim	Page	activitypub/datatypes/coretypes.html#Page	object Page		139
+nim	Video	activitypub/datatypes/coretypes.html#Video	object Video		143
+nim	Place	activitypub/datatypes/coretypes.html#Place	object Place		147
+nim	Profile	activitypub/datatypes/coretypes.html#Profile	object Profile		163
+nim	Relationship	activitypub/datatypes/coretypes.html#Relationship	object Relationship		168
+nim	Tombstone	activitypub/datatypes/coretypes.html#Tombstone	object Tombstone		174
+nim	ltLink	activitypub/datatypes/coretypes.html#ltLink	LinkType.ltLink		180
+nim	ltMention	activitypub/datatypes/coretypes.html#ltMention	LinkType.ltMention		180
+nim	LinkType	activitypub/datatypes/coretypes.html#LinkType	enum LinkType		180
+nim	LinkBase	activitypub/datatypes/coretypes.html#LinkBase	object LinkBase		185
+nim	Link	activitypub/datatypes/coretypes.html#Link	object Link		198
+nim	Mention	activitypub/datatypes/coretypes.html#Mention	object Mention		199
+nim	newArticle	activitypub/datatypes/coretypes.html#newArticle,ID	proc newArticle(id: ID = default(ID)): Article		204
+nim	newAudio	activitypub/datatypes/coretypes.html#newAudio,ID	proc newAudio(id: ID = default(ID)): Audio		207
+nim	newDocument	activitypub/datatypes/coretypes.html#newDocument,ID	proc newDocument(id: ID = default(ID)): Document		210
+nim	newEvent	activitypub/datatypes/coretypes.html#newEvent,ID	proc newEvent(id: ID = default(ID)): Event		213
+nim	newImage	activitypub/datatypes/coretypes.html#newImage,ID	proc newImage(id: ID = default(ID)): Image		216
+nim	newNote	activitypub/datatypes/coretypes.html#newNote,ID	proc newNote(id: ID = default(ID)): Note		219
+nim	newPage	activitypub/datatypes/coretypes.html#newPage,ID	proc newPage(id: ID = default(ID)): Page		222
+nim	newVideo	activitypub/datatypes/coretypes.html#newVideo,ID	proc newVideo(id: ID = default(ID)): Video		225
+nim	newPlace	activitypub/datatypes/coretypes.html#newPlace,ID	proc newPlace(id: ID = default(ID)): Place		228
+nim	newProfile	activitypub/datatypes/coretypes.html#newProfile,ID	proc newProfile(id: ID = default(ID)): Profile		231
+nim	newRelationship	activitypub/datatypes/coretypes.html#newRelationship,ID	proc newRelationship(id: ID = default(ID)): Relationship		234
+nim	newTombstone	activitypub/datatypes/coretypes.html#newTombstone,ID	proc newTombstone(id: ID = default(ID)): Tombstone		237
+nim	newLink	activitypub/datatypes/coretypes.html#newLink,ID,ID	proc newLink(id: ID = default(ID); href: ID = default(ID)): Link		240
+nim	newMention	activitypub/datatypes/coretypes.html#newMention,ID,ID	proc newMention(id: ID = default(ID); href: ID = default(ID)): Mention		243

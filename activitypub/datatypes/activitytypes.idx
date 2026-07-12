@@ -1,0 +1,63 @@
+nimTitle	activitytypes	activitypub/datatypes/activitytypes.html	module activitypub/datatypes/activitytypes		0
+nim	AcceptType	activitypub/datatypes/activitytypes.html#AcceptType	ActivityType.AcceptType		13
+nim	AddType	activitypub/datatypes/activitytypes.html#AddType	ActivityType.AddType		13
+nim	AnnounceType	activitypub/datatypes/activitytypes.html#AnnounceType	ActivityType.AnnounceType		13
+nim	ArriveType	activitypub/datatypes/activitytypes.html#ArriveType	ActivityType.ArriveType		13
+nim	BlockType	activitypub/datatypes/activitytypes.html#BlockType	ActivityType.BlockType		13
+nim	CreateType	activitypub/datatypes/activitytypes.html#CreateType	ActivityType.CreateType		13
+nim	DeleteType	activitypub/datatypes/activitytypes.html#DeleteType	ActivityType.DeleteType		13
+nim	DislikeType	activitypub/datatypes/activitytypes.html#DislikeType	ActivityType.DislikeType		13
+nim	FlagType	activitypub/datatypes/activitytypes.html#FlagType	ActivityType.FlagType		13
+nim	FollowType	activitypub/datatypes/activitytypes.html#FollowType	ActivityType.FollowType		13
+nim	IgnoreType	activitypub/datatypes/activitytypes.html#IgnoreType	ActivityType.IgnoreType		13
+nim	InviteType	activitypub/datatypes/activitytypes.html#InviteType	ActivityType.InviteType		13
+nim	JoinType	activitypub/datatypes/activitytypes.html#JoinType	ActivityType.JoinType		13
+nim	LeaveType	activitypub/datatypes/activitytypes.html#LeaveType	ActivityType.LeaveType		13
+nim	LikeType	activitypub/datatypes/activitytypes.html#LikeType	ActivityType.LikeType		13
+nim	ListenType	activitypub/datatypes/activitytypes.html#ListenType	ActivityType.ListenType		13
+nim	MoveType	activitypub/datatypes/activitytypes.html#MoveType	ActivityType.MoveType		13
+nim	OfferType	activitypub/datatypes/activitytypes.html#OfferType	ActivityType.OfferType		13
+nim	QuestionType	activitypub/datatypes/activitytypes.html#QuestionType	ActivityType.QuestionType		13
+nim	RejectType	activitypub/datatypes/activitytypes.html#RejectType	ActivityType.RejectType		13
+nim	ReadType	activitypub/datatypes/activitytypes.html#ReadType	ActivityType.ReadType		13
+nim	RemoveType	activitypub/datatypes/activitytypes.html#RemoveType	ActivityType.RemoveType		13
+nim	TentativeRejectType	activitypub/datatypes/activitytypes.html#TentativeRejectType	ActivityType.TentativeRejectType		13
+nim	TentativeAcceptType	activitypub/datatypes/activitytypes.html#TentativeAcceptType	ActivityType.TentativeAcceptType		13
+nim	TravelType	activitypub/datatypes/activitytypes.html#TravelType	ActivityType.TravelType		13
+nim	UndoType	activitypub/datatypes/activitytypes.html#UndoType	ActivityType.UndoType		13
+nim	UpdateType	activitypub/datatypes/activitytypes.html#UpdateType	ActivityType.UpdateType		13
+nim	ViewType	activitypub/datatypes/activitytypes.html#ViewType	ActivityType.ViewType		13
+nim	ActivityType	activitypub/datatypes/activitytypes.html#ActivityType	enum ActivityType		13
+nim	ActivityBase	activitypub/datatypes/activitytypes.html#ActivityBase	object ActivityBase		44
+nim	IntransitiveActivityBase	activitypub/datatypes/activitytypes.html#IntransitiveActivityBase	object IntransitiveActivityBase		60
+nim	Accept	activitypub/datatypes/activitytypes.html#Accept	object Accept		68
+nim	Add	activitypub/datatypes/activitytypes.html#Add	object Add		70
+nim	Announce	activitypub/datatypes/activitytypes.html#Announce	object Announce		72
+nim	Arrive	activitypub/datatypes/activitytypes.html#Arrive	object Arrive		74
+nim	Block	activitypub/datatypes/activitytypes.html#Block	object Block		76
+nim	Create	activitypub/datatypes/activitytypes.html#Create	object Create		78
+nim	Delete	activitypub/datatypes/activitytypes.html#Delete	object Delete		80
+nim	Dislike	activitypub/datatypes/activitytypes.html#Dislike	object Dislike		82
+nim	Flag	activitypub/datatypes/activitytypes.html#Flag	object Flag		84
+nim	Follow	activitypub/datatypes/activitytypes.html#Follow	object Follow		86
+nim	Ignore	activitypub/datatypes/activitytypes.html#Ignore	object Ignore		88
+nim	Invite	activitypub/datatypes/activitytypes.html#Invite	object Invite		90
+nim	Join	activitypub/datatypes/activitytypes.html#Join	object Join		92
+nim	Leave	activitypub/datatypes/activitytypes.html#Leave	object Leave		94
+nim	Like	activitypub/datatypes/activitytypes.html#Like	object Like		96
+nim	Listen	activitypub/datatypes/activitytypes.html#Listen	object Listen		98
+nim	Move	activitypub/datatypes/activitytypes.html#Move	object Move		100
+nim	Offer	activitypub/datatypes/activitytypes.html#Offer	object Offer		102
+nim	Question	activitypub/datatypes/activitytypes.html#Question	object Question		104
+nim	Read	activitypub/datatypes/activitytypes.html#Read	object Read		113
+nim	Reject	activitypub/datatypes/activitytypes.html#Reject	object Reject		115
+nim	Remove	activitypub/datatypes/activitytypes.html#Remove	object Remove		117
+nim	TentativeAccept	activitypub/datatypes/activitytypes.html#TentativeAccept	object TentativeAccept		119
+nim	TentativeReject	activitypub/datatypes/activitytypes.html#TentativeReject	object TentativeReject		121
+nim	Travel	activitypub/datatypes/activitytypes.html#Travel	object Travel		123
+nim	Undo	activitypub/datatypes/activitytypes.html#Undo	object Undo		125
+nim	Update	activitypub/datatypes/activitytypes.html#Update	object Update		127
+nim	View	activitypub/datatypes/activitytypes.html#View	object View		129
+nim	ContentManagementActivityTypes	activitypub/datatypes/activitytypes.html#ContentManagementActivityTypes	const ContentManagementActivityTypes		135
+nim	CollectionManagementActivityTypes	activitypub/datatypes/activitytypes.html#CollectionManagementActivityTypes	const CollectionManagementActivityTypes		139
+nim	ReactionsActivityTypes	activitypub/datatypes/activitytypes.html#ReactionsActivityTypes	const ReactionsActivityTypes		141

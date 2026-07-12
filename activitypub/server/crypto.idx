@@ -1,0 +1,13 @@
+nimTitle	crypto	activitypub/server/crypto.html	module activitypub/server/crypto		0
+nim	spkiPrefixEd25519	activitypub/server/crypto.html#spkiPrefixEd25519	const spkiPrefixEd25519		11
+nim	publicKeyToPemEd25519	activitypub/server/crypto.html#publicKeyToPemEd25519,PublicKey	proc publicKeyToPemEd25519(key: PublicKey): string		16
+nim	pemToPublicKeyEd25519	activitypub/server/crypto.html#pemToPublicKeyEd25519,string	proc pemToPublicKeyEd25519(pem: string): PublicKey		32
+nim	generateEd25519Keypair	activitypub/server/crypto.html#generateEd25519Keypair	proc generateEd25519Keypair(): tuple[publicKey: PublicKey, secretKey: SecretKey]		51
+nim	generateEd25519KeypairPem	activitypub/server/crypto.html#generateEd25519KeypairPem	proc generateEd25519KeypairPem(): tuple[publicPem: string, secretHex: string]		56
+nim	signEd25519Raw	activitypub/server/crypto.html#signEd25519Raw,string,SecretKey	proc signEd25519Raw(data: string; secretKey: SecretKey): seq[byte]		63
+nim	verifyEd25519Raw	activitypub/server/crypto.html#verifyEd25519Raw,string,seq[byte],PublicKey	proc verifyEd25519Raw(data: string; signature: seq[byte]; publicKey: PublicKey): bool		68
+nim	signEd25519	activitypub/server/crypto.html#signEd25519,string,string	proc signEd25519(data: string; secretKeyHex: string): string		77
+nim	verifyEd25519	activitypub/server/crypto.html#verifyEd25519,string,string,string	proc verifyEd25519(data: string; signatureBase64: string; publicKeyPem: string): bool		85
+nim	signRsaSha256	activitypub/server/crypto.html#signRsaSha256,string,string	proc signRsaSha256(data: string; pemPrivateKey: string): string		96
+nim	verifyRsaSha256	activitypub/server/crypto.html#verifyRsaSha256,string,string,string	proc verifyRsaSha256(data: string; signatureBase64: string; pemPublicKey: string): bool		119
+nim	sha256Digest	activitypub/server/crypto.html#sha256Digest,string	proc sha256Digest(body: string): string		139

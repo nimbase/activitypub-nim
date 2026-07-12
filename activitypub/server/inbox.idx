@@ -1,0 +1,8 @@
+nimTitle	inbox	activitypub/server/inbox.html	module activitypub/server/inbox		0
+nim	InboxResult	activitypub/server/inbox.html#InboxResult	object InboxResult		19
+nim	FetchActorCallback	activitypub/server/inbox.html#FetchActorCallback	type FetchActorCallback		24
+nim	InboxDispatcher	activitypub/server/inbox.html#InboxDispatcher	object InboxDispatcher		27
+nim	register	activitypub/server/inbox.html#register,InboxDispatcher,string,proc(T,string)	proc register[T](d: var InboxDispatcher; activityType: string;\n            handler: proc (activity: T; verifiedBy: string): InboxResult)		32
+nim	registerDefault	activitypub/server/inbox.html#registerDefault,InboxDispatcher,HandlerFunc	proc registerDefault(d: var InboxDispatcher; handler: HandlerFunc)		46
+nim	newDispatcher	activitypub/server/inbox.html#newDispatcher,FetchActorCallback	proc newDispatcher(fetchActor: FetchActorCallback): InboxDispatcher		53
+nim	handle	activitypub/server/inbox.html#handle,InboxDispatcher,string,seq[],string	proc handle(d: InboxDispatcher; body: string; headers: seq[(string, string)];\n       path: string): InboxResult		61

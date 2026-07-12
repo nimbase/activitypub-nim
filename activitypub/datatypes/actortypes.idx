@@ -1,0 +1,19 @@
+nimTitle	actortypes	activitypub/datatypes/actortypes.html	module activitypub/datatypes/actortypes		0
+nim	ApplicationType	activitypub/datatypes/actortypes.html#ApplicationType	ActorTypes.ApplicationType		13
+nim	GroupType	activitypub/datatypes/actortypes.html#GroupType	ActorTypes.GroupType		13
+nim	OrganizationType	activitypub/datatypes/actortypes.html#OrganizationType	ActorTypes.OrganizationType		13
+nim	PersonType	activitypub/datatypes/actortypes.html#PersonType	ActorTypes.PersonType		13
+nim	ServiceType	activitypub/datatypes/actortypes.html#ServiceType	ActorTypes.ServiceType		13
+nim	ActorTypes	activitypub/datatypes/actortypes.html#ActorTypes	enum ActorTypes		13
+nim	ActorBase	activitypub/datatypes/actortypes.html#ActorBase	object ActorBase		22
+nim	Application	activitypub/datatypes/actortypes.html#Application	object Application		44
+nim	Person	activitypub/datatypes/actortypes.html#Person	object Person		47
+nim	Service	activitypub/datatypes/actortypes.html#Service	object Service		50
+nim	Organization	activitypub/datatypes/actortypes.html#Organization	object Organization		53
+nim	Group	activitypub/datatypes/actortypes.html#Group	object Group		56
+nim	newActorBase	activitypub/datatypes/actortypes.html#newActorBase,ActorTypes,ID	proc newActorBase(atype: ActorTypes; id: ID = default(ID)): ActorBase		59
+nim	newApplication	activitypub/datatypes/actortypes.html#newApplication,ID	proc newApplication(id: ID = default(ID)): Application		62
+nim	newPerson	activitypub/datatypes/actortypes.html#newPerson,ID	proc newPerson(id: ID = default(ID)): Person		65
+nim	newService	activitypub/datatypes/actortypes.html#newService,ID	proc newService(id: ID = default(ID)): Service		68
+nim	newOrganization	activitypub/datatypes/actortypes.html#newOrganization,ID	proc newOrganization(id: ID = default(ID)): Organization		71
+nim	newGroup	activitypub/datatypes/actortypes.html#newGroup,ID	proc newGroup(id: ID = default(ID)): Group		74

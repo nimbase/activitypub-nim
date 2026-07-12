@@ -1,0 +1,14 @@
+nimTitle	storage	activitypub/server/storage.html	module activitypub/server/storage		0
+nim	ActorData	activitypub/server/storage.html#ActorData	object ActorData		14
+nim	ActivityStore	activitypub/server/storage.html#ActivityStore	type ActivityStore		20
+nim	newActivityStore	activitypub/server/storage.html#newActivityStore	proc newActivityStore(): ActivityStore		26
+nim	registerActor	activitypub/server/storage.html#registerActor,ActivityStore,string,string,string,string	proc registerActor(store: ActivityStore; username, domain: string; name: string = "";\n              iconUrl: string = ""): string		35
+nim	findActorByUsername	activitypub/server/storage.html#findActorByUsername,ActivityStore,string	proc findActorByUsername(store: ActivityStore; username: string): ActorData		80
+nim	findActorByAcctUri	activitypub/server/storage.html#findActorByAcctUri,ActivityStore,string	proc findActorByAcctUri(store: ActivityStore; acctUri: string): ActorData		84
+nim	findActorByKeyId	activitypub/server/storage.html#findActorByKeyId,ActivityStore,string	proc findActorByKeyId(store: ActivityStore; keyId: string): ActorData		94
+nim	storeActivity	activitypub/server/storage.html#storeActivity,ActivityStore,string,JsonNode	proc storeActivity(store: ActivityStore; username: string; activity: JsonNode)		102
+nim	getOutboxItems	activitypub/server/storage.html#getOutboxItems,ActivityStore,string	proc getOutboxItems(store: ActivityStore; username: string): seq[JsonNode]		108
+nim	addFollowerUrl	activitypub/server/storage.html#addFollowerUrl,ActivityStore,string,string	proc addFollowerUrl(store: ActivityStore; username: string; followerActorUrl: string)		116
+nim	removeFollowerUrl	activitypub/server/storage.html#removeFollowerUrl,ActivityStore,string,string	proc removeFollowerUrl(store: ActivityStore; username: string;\n                  followerActorUrl: string)		123
+nim	getFollowerUrls	activitypub/server/storage.html#getFollowerUrls,ActivityStore,string	proc getFollowerUrls(store: ActivityStore; username: string): seq[string]		130
+nim	getFollowingUrls	activitypub/server/storage.html#getFollowingUrls,ActivityStore,string	proc getFollowingUrls(store: ActivityStore; username: string): seq[string]		137

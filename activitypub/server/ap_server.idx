@@ -1,0 +1,6 @@
+nimTitle	ap_server	activitypub/server/ap_server.html	module activitypub/server/ap_server		0
+nim	ActivityPubServer	activitypub/server/ap_server.html#ActivityPubServer	object ActivityPubServer		27
+nim	newActivityPubServer	activitypub/server/ap_server.html#newActivityPubServer,string,ActivityStore	proc newActivityPubServer(domain: string; store: ActivityStore): ActivityPubServer		33
+nim	register	activitypub/server/ap_server.html#register,ActivityPubServer,string,proc(T,string)	proc register[T](server: var ActivityPubServer; activityType: string;\n            handler: proc (activity: T; verifiedBy: string): InboxResult)		52
+nim	start	activitypub/server/ap_server.html#start,ActivityPubServer,Port	proc start(server: ActivityPubServer; port: Port)		199
+nim	stop	activitypub/server/ap_server.html#stop,ActivityPubServer	proc stop(server: ActivityPubServer)		210

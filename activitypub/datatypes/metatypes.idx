@@ -1,0 +1,8 @@
+nimTitle	metatypes	activitypub/datatypes/metatypes.html	module activitypub/datatypes/metatypes		0
+nim	ID	activitypub/datatypes/metatypes.html#ID	type ID		6
+nim	MimeType	activitypub/datatypes/metatypes.html#MimeType	type MimeType		10
+nim	Addresses	activitypub/datatypes/metatypes.html#Addresses	object Addresses		14
+nim	PublicKey	activitypub/datatypes/metatypes.html#PublicKey	object PublicKey		19
+nim	Endpoints	activitypub/datatypes/metatypes.html#Endpoints	object Endpoints		26
+nim	parseHook	activitypub/datatypes/metatypes.html#parseHook,,Addresses	proc parseHook(parser: var json.JsonParser; v: var Addresses)		36
+nim	dumpHook	activitypub/datatypes/metatypes.html#dumpHook,string,Addresses	proc dumpHook(s: var string; v: Addresses)		50

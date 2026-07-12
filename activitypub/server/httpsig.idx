@@ -1,0 +1,9 @@
+nimTitle	httpsig	activitypub/server/httpsig.html	module activitypub/server/httpsig		0
+nim	SignatureParams	activitypub/server/httpsig.html#SignatureParams	object SignatureParams		13
+nim	HttpSignatureResult	activitypub/server/httpsig.html#HttpSignatureResult	object HttpSignatureResult		19
+nim	httpDate	activitypub/server/httpsig.html#httpDate,Time	proc httpDate(t: Time = getTime()): string		29
+nim	parseHttpDate	activitypub/server/httpsig.html#parseHttpDate,string	proc parseHttpDate(s: string): Time		42
+nim	parseSignatureHeader	activitypub/server/httpsig.html#parseSignatureHeader,string	proc parseSignatureHeader(header: string): SignatureParams		70
+nim	getPublicKeyPem	activitypub/server/httpsig.html#getPublicKeyPem,,string	proc getPublicKeyPem(actor: stdjson.JsonNode; keyId: string): string		121
+nim	signRequest	activitypub/server/httpsig.html#signRequest,string,string,string,string,string,string,string	proc signRequest(method, path, host, body, keyId, secretKeyHex: string;\n            algorithm = "ed25519"): HttpSignatureResult		138
+nim	verifyRequest	activitypub/server/httpsig.html#verifyRequest,string,string,string,seq[],,int64	proc verifyRequest(method, path, body: string; reqHeaders: seq[(string, string)];\n              actorJson: stdjson.JsonNode; maxSkewSeconds: int64 = 30): bool		166

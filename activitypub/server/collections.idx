@@ -1,0 +1,4 @@
+nimTitle	collections	activitypub/server/collections.html	module activitypub/server/collections		0
+nim	fetchCollection	activitypub/server/collections.html#fetchCollection,string	proc fetchCollection(url: string): Collection		16
+nim	fetchCollectionPage	activitypub/server/collections.html#fetchCollectionPage,string	proc fetchCollectionPage(url: string): CollectionPage		28
+nim	fetchAllItems	activitypub/server/collections.html#fetchAllItems,string	proc fetchAllItems(url: string): seq[JsonNode]		40

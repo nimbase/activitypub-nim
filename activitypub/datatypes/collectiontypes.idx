@@ -1,0 +1,11 @@
+nimTitle	collectiontypes	activitypub/datatypes/collectiontypes.html	module activitypub/datatypes/collectiontypes		0
+nim	ctCollection	activitypub/datatypes/collectiontypes.html#ctCollection	CollectionType.ctCollection		10
+nim	ctOrderedCollection	activitypub/datatypes/collectiontypes.html#ctOrderedCollection	CollectionType.ctOrderedCollection		10
+nim	ctCollectionPage	activitypub/datatypes/collectiontypes.html#ctCollectionPage	CollectionType.ctCollectionPage		10
+nim	ctOrderedCollectionPage	activitypub/datatypes/collectiontypes.html#ctOrderedCollectionPage	CollectionType.ctOrderedCollectionPage		10
+nim	CollectionType	activitypub/datatypes/collectiontypes.html#CollectionType	enum CollectionType		10
+nim	CollectionBase	activitypub/datatypes/collectiontypes.html#CollectionBase	object CollectionBase		17
+nim	Collection	activitypub/datatypes/collectiontypes.html#Collection	object Collection		31
+nim	OrderedCollection	activitypub/datatypes/collectiontypes.html#OrderedCollection	object OrderedCollection		37
+nim	CollectionPage	activitypub/datatypes/collectiontypes.html#CollectionPage	object CollectionPage		43
+nim	OrderedCollectionPage	activitypub/datatypes/collectiontypes.html#OrderedCollectionPage	object OrderedCollectionPage		55

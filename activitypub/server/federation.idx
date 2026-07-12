@@ -1,0 +1,7 @@
+nimTitle	federation	activitypub/server/federation.html	module activitypub/server/federation		0
+nim	RemoteActor	activitypub/server/federation.html#RemoteActor	object RemoteActor		17
+nim	FederationResult	activitypub/server/federation.html#FederationResult	object FederationResult		24
+nim	resolveRemoteActor	activitypub/server/federation.html#resolveRemoteActor,string	proc resolveRemoteActor(handle: string): RemoteActor		29
+nim	deliverActivity	activitypub/server/federation.html#deliverActivity,RemoteActor,string,JsonNode,string	proc deliverActivity(remote: RemoteActor; secretKeyHex: string;\n                activityJson: JsonNode; keyId: string = ""): FederationResult[\n    string]		68
+nim	verifyInboxRequest	activitypub/server/federation.html#verifyInboxRequest,string,seq[],string,proc(string)	proc verifyInboxRequest(body: string; headers: seq[(string, string)]; path: string;\n                   fetchActor: proc (keyId: string): JsonNode): FederationResult[\n    string]		110
+nim	fetchObject	activitypub/server/federation.html#fetchObject,string	proc fetchObject(url: string): JsonNode		139

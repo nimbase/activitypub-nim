@@ -1,0 +1,9 @@
+nimTitle	activitypub	activitypub.html	module activitypub		0
+heading	Data Types	activitypub.html#data-types	  Data Types		0
+heading	Discovery	activitypub.html#discovery	  Discovery		0
+heading	Crypto & HTTP Signatures	activitypub.html#crypto-amp-http-signatures	  Crypto &amp; HTTP Signatures		0
+heading	Federation	activitypub.html#federation	  Federation		0
+heading	Activity Builders	activitypub.html#activity-builders	  Activity Builders		0
+heading	C2S Client	activitypub.html#c2s-client	  C2S Client		0
+heading	Inbox Dispatcher	activitypub.html#inbox-dispatcher	  Inbox Dispatcher		0
+heading	Server	activitypub.html#server	  Server		0

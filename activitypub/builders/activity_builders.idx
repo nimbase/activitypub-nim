@@ -1,0 +1,12 @@
+nimTitle	activity_builders	activitypub/builders/activity_builders.html	module activitypub/builders/activity_builders		0
+nim	nowIso	activitypub/builders/activity_builders.html#nowIso	proc nowIso(): string		20
+nim	buildNote	activitypub/builders/activity_builders.html#buildNote,string,string,string,seq[string],seq[string]	proc buildNote(content: string; attributedTo: string; summary: string = "";\n          to: seq[string] = @[]; cc: seq[string] = @[]): Note		24
+nim	buildFollow	activitypub/builders/activity_builders.html#buildFollow,string,string	proc buildFollow(actor, target: string): Follow		47
+nim	buildAccept	activitypub/builders/activity_builders.html#buildAccept,string,Follow	proc buildAccept(actor: string; follow: Follow): Accept		68
+nim	buildReject	activitypub/builders/activity_builders.html#buildReject,string,Follow	proc buildReject(actor: string; follow: Follow): Reject		82
+nim	buildCreate	activitypub/builders/activity_builders.html#buildCreate,string,T,seq[string],seq[string]	proc buildCreate[T: ObjectBase](actor: string; obj: T; to: seq[string] = @[];\n                           cc: seq[string] = @[]): Create		95
+nim	buildDelete	activitypub/builders/activity_builders.html#buildDelete,string,string	proc buildDelete(actor, objectId: string): Delete		111
+nim	buildUpdate	activitypub/builders/activity_builders.html#buildUpdate,string,T	proc buildUpdate[T: ObjectBase](actor: string; obj: T): Update		123
+nim	buildAnnounce	activitypub/builders/activity_builders.html#buildAnnounce,string,T,seq[string],seq[string]	proc buildAnnounce[T: ObjectBase](actor: string; obj: T; to: seq[string] = @[];\n                             cc: seq[string] = @[]): Announce		135
+nim	buildLike	activitypub/builders/activity_builders.html#buildLike,string,string	proc buildLike(actor, objectId: string): Like		150
+nim	buildUndo	activitypub/builders/activity_builders.html#buildUndo,string,T	proc buildUndo[T: ActivityBase](actor: string; obj: T): Undo		162
