@@ -4,7 +4,7 @@
 ## All builders return fully-populated Nim types ready for serialization or delivery.
 
 import std/[times, options]
-import openparser/json as opj
+import openparser/json
 import openparser/uuid
 import ../datatypes/[metatypes, coretypes, activitytypes]
 
@@ -75,7 +75,7 @@ proc buildAccept*(actor: string, follow: Follow): Accept =
     id: some($v4()),
     `type`: AcceptType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(follow)),
+    `object`: some(toJsonNode(follow)),
     to: followerAddress(follow)
   )
 
@@ -88,7 +88,7 @@ proc buildReject*(actor: string, follow: Follow): Reject =
     id: some($v4()),
     `type`: RejectType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(follow)),
+    `object`: some(toJsonNode(follow)),
     to: followerAddress(follow)
   )
 
@@ -103,7 +103,7 @@ proc buildCreate*[T: ObjectBase](actor: string, obj: T,
     id: some($v4()),
     `type`: CreateType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(obj)),
+    `object`: some(toJsonNode(obj)),
     to: toAddresses(to),
     cc: toAddresses(cc)
   )
@@ -129,7 +129,7 @@ proc buildUpdate*[T: ObjectBase](actor: string, obj: T): Update =
     id: some($v4()),
     `type`: UpdateType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(obj))
+    `object`: some(toJsonNode(obj))
   )
 
 proc buildAnnounce*[T: ObjectBase](actor: string, obj: T,
@@ -142,7 +142,7 @@ proc buildAnnounce*[T: ObjectBase](actor: string, obj: T,
     id: some($v4()),
     `type`: AnnounceType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(obj)),
+    `object`: some(toJsonNode(obj)),
     to: toAddresses(to),
     cc: toAddresses(cc)
   )
@@ -168,5 +168,5 @@ proc buildUndo*[T: ActivityBase](actor: string, obj: T): Undo =
     id: some($v4()),
     `type`: UndoType,
     actor: some(%* actor),
-    `object`: some(opj.toJsonNode(obj))
+    `object`: some(toJsonNode(obj))
   )

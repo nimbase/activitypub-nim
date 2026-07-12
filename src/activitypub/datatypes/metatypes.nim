@@ -1,5 +1,5 @@
-import std/[uri, options, json]
-import openparser/json as opj
+import std/[uri, options]
+import openparser/json
 export uri, options, json
 
 type
@@ -33,15 +33,15 @@ type
     signClientKey*: Option[ID]
     sharedInbox*: Option[ID]
 
-proc parseHook*(parser: var opj.JsonParser, v: var Addresses) =
-  if parser.curr.kind == opj.jtkLBracket:
-    parser.expectSkip(opj.jtkLBracket)
-    while parser.curr.kind != opj.jtkRBracket:
+proc parseHook*(parser: var JsonParser, v: var Addresses) =
+  if parser.curr.kind == jtkLBracket:
+    parser.expectSkip(jtkLBracket)
+    while parser.curr.kind != jtkRBracket:
       var item: JsonNode
       parser.parseHook(item)
       v.items.add(item)
-      opj.ensureComma()
-    parser.expectSkip(opj.jtkRBracket)
+      ensureComma()
+    parser.expectSkip(jtkRBracket)
   else:
     var item: JsonNode
     parser.parseHook(item)
@@ -51,5 +51,5 @@ proc dumpHook*(s: var string, v: Addresses) =
   s.add("[")
   for i, item in v.items:
     if i > 0: s.add(",")
-    opj.dumpHook(s, item)
+    dumpHook(s, item)
   s.add("]")

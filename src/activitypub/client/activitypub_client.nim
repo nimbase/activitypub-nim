@@ -10,8 +10,8 @@
 ##   discard client.like("@user@remote.social", "https://remote.social/posts/1")
 ##   discard client.postNote("Hello World", to = @["@friend@other.social"])
 
-import std/[json, httpclient, strutils]
-import openparser/json as opj
+import std/[httpclient, strutils]
+import openparser/json
 import ../datatypes/[metatypes, coretypes, activitytypes]
 import ../server/[httpsig, federation]
 import ../builders/activity_builders
@@ -142,7 +142,7 @@ proc follow*(client: Client; targetHandleOrUrl: string): FederationResult[string
   let inbox = tryResolveInbox(targetHandleOrUrl)
   if not inbox.success: return inbox
   let activity = buildFollow(client.id, targetHandleOrUrl)
-  trySend(client, opj.toJsonNode(activity), inbox.data)
+  trySend(client, toJsonNode(activity), inbox.data)
 
 proc unfollow*(client: Client; targetHandleOrUrl: string): FederationResult[string] =
   ## Sends an `Undo(Follow)` activity to a remote actor's inbox.
@@ -152,7 +152,7 @@ proc unfollow*(client: Client; targetHandleOrUrl: string): FederationResult[stri
   if not inbox.success: return inbox
   let follow = buildFollow(client.id, targetHandleOrUrl)
   let activity = buildUndo(client.id, follow)
-  trySend(client, opj.toJsonNode(activity), inbox.data)
+  trySend(client, toJsonNode(activity), inbox.data)
 
 proc like*(client: Client; actorHandleOrUrl, objectUrl: string): FederationResult[string] =
   ## Sends a `Like` activity to an actor's inbox.
@@ -162,7 +162,7 @@ proc like*(client: Client; actorHandleOrUrl, objectUrl: string): FederationResul
   let inbox = tryResolveInbox(actorHandleOrUrl)
   if not inbox.success: return inbox
   let activity = buildLike(client.id, objectUrl)
-  trySend(client, opj.toJsonNode(activity), inbox.data)
+  trySend(client, toJsonNode(activity), inbox.data)
 
 proc unlike*(client: Client; actorHandleOrUrl, objectUrl: string): FederationResult[string] =
   ## Sends an `Undo(Like)` activity to an actor's inbox.
@@ -173,7 +173,7 @@ proc unlike*(client: Client; actorHandleOrUrl, objectUrl: string): FederationRes
   if not inbox.success: return inbox
   let like = buildLike(client.id, objectUrl)
   let activity = buildUndo(client.id, like)
-  trySend(client, opj.toJsonNode(activity), inbox.data)
+  trySend(client, toJsonNode(activity), inbox.data)
 
 proc postNote*(client: Client; content: string; to: seq[string] = @[];
                cc: seq[string] = @[]; summary: string = ""): FederationResult[string] =
@@ -183,4 +183,4 @@ proc postNote*(client: Client; content: string; to: seq[string] = @[];
   ## The server receiving the outbox POST handles further federation.
   let note = buildNote(content, client.id, summary, to, cc)
   let create = buildCreate(client.id, note)
-  trySend(client, opj.toJsonNode(create), client.outbox)
+  trySend(client, toJsonNode(create), client.outbox)
