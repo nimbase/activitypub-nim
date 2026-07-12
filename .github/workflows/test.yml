@@ -35,5 +35,5 @@ jobs:
           sudo ldconfig
           cd ..
       - run: nimble install -Y
-      - run: nim c src/${{ github.event.repository.name }}.nim
+      - run: nim c src/activitypub.nim
       - run: nimble test
