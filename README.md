@@ -1,6 +1,5 @@
 <p align="center">
-  ActivityPub for Nim lang<br>
-  <strong>Fast</strong> • <strong>Compiled</strong> • <strong>Source-to-Source</strong> • <strong>Interpreter</strong><br>
+  ActivityPub implementation in Nim 
 </p>
 
 <p align="center">
@@ -23,11 +22,22 @@
 - Inbox dispatcher with type-based routing and HTTP Signature verification
 - Activity builders: `buildFollow`, `buildAccept`, `buildReject`, `buildUndo`, `buildCreate`, `buildDelete`, `buildNote`, `buildCollectionPage`, `buildOrderedCollection`, `buildCollection`
 - Collection pagination: `fetchCollection`, `fetchCollectionPage`, `fetchAllItems`
-- Built-in HTTP server (powered by powpow) with routes for WebFinger, actor profiles, inbox, outbox, followers, and following
+- Built-in HTTP server (powered by [pkg/powpow](https://github.com/openpeeps/powpow)) with:
+  - Routes for WebFinger
+  - Actor profiles, inbox, outbox, followers, and following
 
+### Requirements
+```
+requires "nim >= 2.0.0"
+requires "openparser >= 0.1.6"
+requires "checksums >= 0.2.2"
+requires "e2ee > 0.1.0"       # `monocypher` is required
+requires "powpow > 0.1.4"
+requires "ormin#head"
+```
 
 ## Roadmap
-- Persistent storage backends (SQLite, PostgreSQL) using `pkg/ormin`
+- Persistent storage backends (SQLite, PostgreSQL) using [pkg/ormin](https://github.com/araq/ormin)
 - C2S client-to-server endpoints (POST `/users/{id}/outbox`, GET `/users/{id}/following`)
 - Activity forwarding and shared inbox support
 - Object retrieval with forward/fetch (`object` property resolution)
