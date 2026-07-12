@@ -1,0 +1,5 @@
+switch("path", "$projectDir/../src")
+switch("path", "$projectDir/../../powpow/src")
+switch("passC", "-I/usr/local/include")
+switch("passL", "/usr/local/lib/libmonocypher.a")
+switch("define", "ssl")
