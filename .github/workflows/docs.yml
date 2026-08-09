@@ -1,6 +1,15 @@
 name: docs
 on:
+  pull_request:
+    paths-ignore:
+      - LICENSE
+      - README.*
+      - examples
   push:
+    paths-ignore:
+      - LICENSE
+      - README.*
+      - examples
     tags:
       - '*.*.*'
     branches:

@@ -41,12 +41,30 @@ requires "ormin#head"
 - C2S client-to-server endpoints (POST `/users/{id}/outbox`, GET `/users/{id}/following`)
 - Activity forwarding and shared inbox support
 - Object retrieval with forward/fetch (`object` property resolution)
-- ActivityStreams vocabulary types coverage
 - Linked Data Signatures (2017/2019)
 - FEP compatibility (FEP-2677, FEP-8cf5, FEP-7888)
 - Rate limiting and request validation middleware
 - Support non-spec ecosystem extensions (Mastodon's Hashtag, Emoji, PropertyValue)
 - API stabilization for v1.0.0 release
+
+## Examples
+Runnable examples live in [`examples/`](examples/). Each is self-contained:
+
+| File | What it demonstrates |
+|---|---|
+| `ex_01_types.nim` | ActivityStreams data types: build, serialize, deserialize |
+| `ex_02_crypto.nim` | Ed25519 keypairs, signing, SHA-256 digests, HTTP Signatures |
+| `ex_03_builders.nim` | Activity builders: Follow, Accept, Create, Delete, Like, Undo, ... |
+| `ex_04_webfinger.nim` | Handle parsing and JRD responses for WebFinger |
+| `ex_05_dispatcher.nim` | Inbox dispatcher with typed handlers and signature verification |
+| `ex_06_server.nim` | Full ActivityPub HTTP server (powpow) with live endpoints |
+| `ex_07_client.nim` | C2S client: signed delivery of a Follow to an inbox |
+
+Run any example with:
+
+```
+nim c -r examples/ex_01_types.nim
+```
 
 ### ❤ Contributions & Support
 - 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/activitypub-nim/issues)
