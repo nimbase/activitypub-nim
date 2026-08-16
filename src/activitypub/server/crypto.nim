@@ -1,12 +1,14 @@
 ## Cryptographic operations for ActivityPub HTTP Signatures.
 ##
-## Uses `e2ee` (Monocypher) for Ed25519 and `checksums` for SHA-256.
-## RSA-SHA256 via `openssl dgst` subprocess as fallback.
+## Uses `nimcypher` (pure-Nim port of Monocypher) for Ed25519 and
+## `checksums` for SHA-256. RSA-SHA256 via `openssl dgst` subprocess as fallback.
 
 import std/[base64, osproc, strutils, times, random, os]
-import e2ee/signs
+import nimcypher/sign
+import nimcypher/secret
+import nimcypher/utils
 import checksums/sha2
-export signs
+export sign, secret, utils
 
 const spkiPrefixEd25519* = [
   byte 0x30, 0x2A, 0x30, 0x05, 0x06, 0x03,
@@ -48,8 +50,11 @@ proc pemToPublicKeyEd25519*(pem: string): PublicKey =
   for i in 0..31:
     result[i] = uint8(der[i + 12])
 
-proc generateEd25519Keypair*(): tuple[publicKey: PublicKey, secretKey: SecretKey] =
-  ## Generates an Ed25519 keypair and returns (PublicKey, SecretKey).
+proc generateEd25519Keypair*(): tuple[publicKey: PublicKey, secretKey: Secret[SecretKey]] =
+  ## Generates an Ed25519 keypair and returns (PublicKey, Secret[SecretKey]).
+  ##
+  ## The secret key is wrapped in a `Secret` so its memory is wiped in
+  ## constant time when it goes out of scope.
   let kp = generateSigningKeyPair()
   (kp.publicKey, kp.secretKey)
 

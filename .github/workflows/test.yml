@@ -1,37 +1,7 @@
 name: test
-on:
-  push:
-    paths-ignore:
-      - LICENSE
-      - README.*
-      - examples
-  pull_request:
-    paths-ignore:
-      - LICENSE
-      - README.*
-      - examples
+on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        nim-version:
-          - 'stable'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: jiro4989/setup-nim-action@v1
-        with:
-          nim-version: ${{ matrix.nim-version }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install Monocypher from source
-        run: |
-          curl -LO https://monocypher.org/download/monocypher-4.0.2.tar.gz
-          tar -xzf monocypher-4.0.2.tar.gz
-          cd monocypher-4.0.2
-          make
-          sudo make install
-          sudo ldconfig
-          cd ..
-      - run: nimble install -Y
-      - run: nim c src/activitypub.nim
-      - run: nimble test
+    uses: nimbase/setup-nim-action/.github/workflows/test.yml@main
+    with:
+      nim-version: stable

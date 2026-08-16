@@ -10,9 +10,8 @@ srcDir        = "src"
 # Dependencies
 
 requires "nim >= 2.0.0"
-requires "openparser >= 0.1.9"
 requires "checksums >= 0.2.2"
-requires "e2ee >= 0.1.0"
-requires "powpow >= 0.1.8"
+requires "openparser >= 0.1.9"
+requires "nimcypher >= 0.1.0"
+requires "powpow >= 0.1.9"
 requires "mimedb >= 0.1.1"
-# requires "ormin#head"
