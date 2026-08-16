@@ -5,3 +5,5 @@ jobs:
     uses: nimbase/setup-nim-action/.github/workflows/test.yml@main
     with:
       nim-version: stable
+      pre-install-command: nimble install
+      test-command: clue test --threads
